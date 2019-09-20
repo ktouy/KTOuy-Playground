@@ -13,9 +13,9 @@ body {
     /* border-bottom: 4px dashed #bdc3c7; */
     text-align: center;
     font-weight: bold;
-    font-size: 10em;
+    font-size: 5em;
     width: 300px;
-    height: 100px;
+    height: 50px;
     line-height: 60px;
     margin: 40px auto;
     letter-spacing: -.07em;
@@ -44,7 +44,7 @@ input[type="range"]::-webkit-slider-thumb {
     transition: .3s ease-in-out;
 }
 
-​ input[type="range"]::-webkit-slider-thumb:hover {
+​input[type="range"]::-webkit-slider-thumb:hover {
     background-color: white;
     border: 2px solid #e74c3c;
 }
@@ -72,7 +72,7 @@ h1 {
     color: rgb(7, 95, 91);
     font-weight: 100;
     font-size: 40px;
-    margin: 40px 0px 20px;
+    margin: 20px 0px 20px;
 }
 
 p {
@@ -115,8 +115,8 @@ p {
 input {
     border-radius: 5px;
     margin: 5%;
-    /* padding: 5px; */
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .app-footer {
@@ -148,7 +148,6 @@ input {
 } */
 .content {
     margin-top: 50px;
-
 }
 
 .app-header {
@@ -158,4 +157,12 @@ input {
     top: 0;
     left: 0;
     right: 0;
+}
+
+.timeoff {
+    display: inline-block;
+}
+
+.timeselector {
+    padding: 5%;
 }
