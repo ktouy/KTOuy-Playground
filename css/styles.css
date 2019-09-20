@@ -1,138 +1,150 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:700);
 
 body {
-    font-family: "Dosis", Helvetica, Arial, sans-serif;
-    background: #ecf0f1;
-    color: #34495e;
-    padding-top: 40px;
-    /* text-shadow: white 1px 1px 1px; */
-    text-align: center;
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+  background: #ecf0f1;
+  color: #34495e;
+  padding-top: 40px;
+  /* text-shadow: white 1px 1px 1px; */
+  text-align: center;
 }
 
 .value {
-    /* border-bottom: 4px dashed #bdc3c7; */
-    text-align: center;
-    font-weight: bold;
-    font-size: 5em;
-    width: 300px;
-    height: 50px;
-    line-height: 60px;
-    margin: 40px auto;
-    letter-spacing: -.07em;
-    text-shadow: white 2px 2px 2px;
+  /* border-bottom: 4px dashed #bdc3c7; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 5em;
+  width: 300px;
+  height: 50px;
+  line-height: 60px;
+  margin: 40px auto;
+  letter-spacing: -.07em;
+  text-shadow: white 2px 2px 2px;
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
 }
 
 input[type="range"] {
-    display: block;
-    -webkit-appearance: none;
-    background-color: #bdc3c7;
-    width: 300px;
-    height: 5px;
-    border-radius: 5px;
-    margin: 0 auto;
-    outline: 0;
+  display: block;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #2ca3a3;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: .3s ease-in-out;
+  -webkit-appearance: none;
+  background-color: #2ca3a3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: white;
-    border: 2px solid #e74c3c;
+  background-color: white;
+  border: 2px solid #e74c3c;
 }
 
 input[type="range"]::-webkit-slider-thumb:active {
-    transform: scale(1.6);
+  transform: scale(1.6);
 }
 
 label {
-    color: rgb(0, 129, 129);
-    font-weight: 100;
-    font-size: 40px;
-    margin: 40px 0px 20px;
+  color: rgb(0, 129, 129);
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
 }
 
 .header {
-    padding: 1px;
-    text-align: center;
-    background: rgb(15, 180, 172);
-    color: white;
-    font-size: 25px;
+  padding: 1px;
+  text-align: center;
+  background: rgb(15, 180, 172);
+  color: white;
+  font-size: 25px;
 }
 
 h1 {
-    color: rgb(7, 95, 91);
-    font-weight: 100;
-    font-size: 40px;
-    margin: 20px 0px 20px;
+  color: rgb(7, 95, 91);
+  font-weight: 100;
+  font-size: 40px;
+  margin: 20px 0px 20px;
 }
 
 p {
-    color: rgb(51, 153, 153);
-    font-family: sans-serif;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 20px;
+  color: rgb(51, 153, 153);
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 20px;
 }
 
 #clockdiv {
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
 }
 
 #clockdiv>div {
-    padding: 10px;
-    border-radius: 3px;
-    background: rgb(15, 180, 172);
-    display: inline-block;
+  padding: 10px;
+  border-radius: 3px;
+  background: rgb(15, 180, 172);
+  display: inline-block;
 }
 
 #clockdiv div>span {
-    padding: 15px;
-    border-radius: 3px;
-    background: rgb(0, 129, 129);
-    display: inline-block;
+  padding: 15px;
+  border-radius: 3px;
+  background: rgb(0, 129, 129);
+  display: inline-block;
+  width: 40px;
 }
 
 .smalltext {
-    padding-top: 5px;
-    font-size: 16px;
+  padding-top: 5px;
+  font-size: 16px;
 }
 
 input {
-    border-radius: 5px;
-    margin: 5%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  border-radius: 7px;
+  margin: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: white;
+  color: #34495e;
 }
 
 .app-footer {
-    height: max-content;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    text-align: left;
-    background: rgb(15, 180, 172);
+  height: max-content;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: left;
+  background: rgb(15, 180, 172);
 }
 
 .push {
-    height: 50px;
+  height: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /* .app-header {
@@ -147,22 +159,22 @@ input {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
 } */
 .content {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .app-header {
-    height: max-content;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
+  height: max-content;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .timeoff {
-    display: inline-block;
+  display: inline-block;
 }
 
 .timeselector {
-    padding: 5%;
+  padding: 5%;
 }

@@ -71,7 +71,7 @@ function timet() {
   
   document.getElementById("hs").innerHTML = rs;
   console.log("Time out - " + rs);
-
+  
 }
 
 function timeLeft() {
@@ -81,7 +81,7 @@ function timeLeft() {
   ss = new Date().getSeconds();
   ss = 59 - ss;
   //console.log(n(ct) + ":" + n(Math.abs(cm)) + ":" + n(ss));
-  document.getElementById("hs1").innerHTML = n(dT.getHours()) + ":" + n(dT.getMinutes());
+  document.getElementById("hs1").innerHTML = m(dT.getHours()) + ":" + m(dT.getMinutes());
 }
 
 
