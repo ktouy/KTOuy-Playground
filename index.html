@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Time Calc v2</title>
+    <title>Time Calc v3</title>
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <script src="./js/script.js" type="text/javascript"></script>
 </head>
@@ -9,18 +9,31 @@
 <body onload="timet();initializeClock('clockdiv', deadline);">
     <header id="app-header" class="app-header">
         <div class="header">
-            <h1>Time Calc v2</h1>
+            <h1>Time Calc v3</h1>
         </div>
     </header>
 
     <div class="content">
-        <input type="time" id="time" value="13:00" onchange="timet()">
+        <div class="timeoff">
+            <input type="time" id="time" value="13:00" onchange="timet()">
+            <br>
+            <span>
+                <label for="p" class="smalltext">Time Off : </label>
+                <p id="hs" class="smalltext">00:00</p>
+            </span>
+            <br>
+            <span>
+                <label for="p" class="smalltext">Current Time : </label>
+                <p id="hs1" class="smalltext">00:00</p>
+            </span>
+        </div>
+
         <h1>Countdown Clock</h1>
         <div id="clockdiv">
             <!-- <div>
-            <span class="days"></span>
-            <div class="smalltext">Days</div>
-    </div> -->
+                <span class="days"></span>
+                <div class="smalltext">Days</div>
+            </div> -->
             <div>
                 <span class="hours">00</span>
                 <div class="smalltext">Hours</div>
@@ -35,7 +48,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="timeselector">
             <br>
             <p id="r1">Hours</p>
             <br>
@@ -44,21 +57,10 @@
             <br>
             <p id="r1">Minutes</p>
             <br>
-            <p id="slider2" class="value">57</p>
+            <p id="slider2" class="value">45</p>
             <input id="rm1" class="slider" type="range" min="0" max="59" value="45">
         </div>
-        <div>
-            <br>
-            <span>
-                <label for="p" class="smalltext">Time Off : </label>
-                <p id="hs" class="smalltext">00:00</p>
-            </span>
-            <br>
-            <span>
-                <label for="p" class="smalltext">Current Time : </label>
-                <p id="hs1" class="smalltext">00:00</p>
-            </span>
-        </div>
+
     </div>
     <div class="push"></div>
     <footer class="app-footer">by Ktouy 2019</footer>
