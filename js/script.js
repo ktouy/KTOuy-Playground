@@ -11,11 +11,15 @@ var cm;
 var cs;
 
 function n(n) {
-  return n > 9 ? "" + n : "0" + n;
+  return n > 10 ? "" + n : "0" + n;
 }
 
 function d(d) {
   return parseInt(d);
+}
+
+function m(m){
+  return ("0" + m).slice(-2);
 }
 
 function timet() {
@@ -45,28 +49,29 @@ function timet() {
   console.log("Time in - " + nt + ":" + n(nm));
   nt = nt + rh1; //8
   nm = nm + rh2; //45
-  console.log(d(rh1)+"rh");
+  //console.log(d(rh1)+"rh");
   
   if (nm > 59) {
     nt = nt + 1;
     nm = 60 - nm;
-    nm = n(Math.abs(nm));
+    nm = m(Math.abs(nm));
   } else {
-    nm = nm;
+    nm = m(nm);
   }
   
   if (nt === 24) {
-    nt = n(0).substr(0, 1);
+    nt = m(0).substr(0, 1);
     
   } else if (nt > 24) {
     nt = Math.abs(nt - 24);
   }
   
-  nt = n(nt);
-  rs = nt + ":" + n(nm);
+  nt = m(nt);
+  rs = nt + ":" + m(nm);
   
   document.getElementById("hs").innerHTML = rs;
   console.log("Time out - " + rs);
+
 }
 
 function timeLeft() {
@@ -75,7 +80,7 @@ function timeLeft() {
   cm = parseInt(nm - dT.getMinutes());
   ss = new Date().getSeconds();
   ss = 59 - ss;
-  console.log(n(ct) + ":" + n(Math.abs(cm)) + ":" + n(ss));
+  //console.log(n(ct) + ":" + n(Math.abs(cm)) + ":" + n(ss));
   document.getElementById("hs1").innerHTML = n(dT.getHours()) + ":" + n(dT.getMinutes());
 }
 
