@@ -6,6 +6,7 @@ function delante() {
   window.history.forward();
 }
 
-setInterval(back, 1000);
-
+var int = setInterval(back, 1000);
+setTimeout(back, 1000);
+clearInterval(int);
 
