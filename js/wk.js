@@ -1,4 +1,4 @@
-// Calculate Weeks
+// Calculate Weeks js
 
 function diff_weeks(dt2, dt1) {
   var diff = (dt2.getTime() - dt1.getTime()) / 1000;
