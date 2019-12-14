@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------------------------------------
 // Calculate Weeks
-let dt1 = new Date();
-let dt2 = new Date("September 21, 2019 11:13:00");
+var dt1 = new Date();
+var dt2 = new Date("September 21, 2019 11:13:00");
 var wkdf;
 
 //Calculate day of the year
@@ -41,9 +41,34 @@ Date.prototype.getWeekYear = function () {
     return date.getFullYear();
 }
 
+function dtn() {
+    var dtn1 = document.getElementById('date').value;
+    //extract date
+
+    var arr = dtn1.split("-");
+    var dntyear = arr[0];
+    var dntmonth = arr[1];
+    var dntday = arr[2];
+
+    var months = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+    var month_index = parseInt(arr[1], 10) - 1;
+    console.log("----------DTN-------------");
+    console.log("The selected month is " + months[month_index]);
+    console.log(arr)
+    var extracted1 = months[month_index] + " " + dntday + ", " + dntyear + " 00:00:00";
+    var dtx = new Date(extracted1);
+    dt1 = dtx;
+    dtn1 = dtx;
+}
+
 function t1() {
-    console.log("-------------------------");
-    wkdf = parseInt(dt1.getWeek() - dt2.getWeek());
+    var datee = document.getElementById('date')
+    var dtn1 = datee.value
+
+    console.log("-----------T1------------");
+
+
     console.log("Difference in Weeks " + wkdf);
     console.log("-------------------------");
     console.log(dt1 + " Week of the year - " + dt1.getWeek());
@@ -52,73 +77,63 @@ function t1() {
     //    console.log(dt1 + " Week - " + dt2.getWeekYear());
     console.log("-------------------------");
 
-    function dtn() {
-        var dtn1 = document.getElementById('date').value;
-        //extract date
+    var arr = dtn1.split("-");
+    var dntyear = arr[0];
+    var dntmonth = arr[1];
+    var dntday = arr[2];
 
-        var arr = dtn1.split("-");
-        var dntyear = arr[0];
-        var dntmonth = arr[1];
-        var dntday = arr[2];
-
-        var months = ["January", "February", "March", "April", "May", "June",
+    var months = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
-        var month_index = parseInt(arr[1], 10) - 1;
-        console.log("The selected month is " + months[month_index]);
-        console.log(arr)
-        var extracted1 = months[month_index] + " " + dntday + ", " + dntyear + " 00:00:00";
-        var dtx = new Date(extracted1);
-        dt1 = dtx;
-        dtn1 = dtx;
-        console.log("dtn1 ");
+    var month_index = parseInt(arr[1], 10) - 1;
+    console.log("----------DTN-------------");
+    console.log("The selected month is " + months[month_index]);
+    console.log(arr)
+    var extracted1 = months[month_index] + " " + dntday + ", " + dntyear + " 00:00:00";
+    var dtx = new Date(extracted1);
+    dt1 = dtx;
+    dtn1 = dtx;
+    wkdf = parseInt(dt1.getWeek() - dt2.getWeek());
+    wk = document.getElementById("wk");
+    dy = document.getElementById("dy");
+    wk.innerHTML = wkdf;
+    dy.innerHTML = dayofyear(dt1) - dayofyear(dt2);
+    console.log("----------GW-------------");
+    console.log("wk" + wk.innerHTML);
+    console.log("dy" + dy.innerHTML);
+    console.log("-------------------------");
 
+    //    function getWeeksStartAndEndInMonth(month, year, start) {
+    //        let weeks = [],
+    //            firstDate = new Date(year, month, 1),
+    //            lastDate = new Date(year, month + 1, 0),
+    //            numDays = lastDate.getDate();
+    //
+    //        start = 1;
+    //        let end = 7 - firstDate.getDay();
+    //        if (start === 'monday') {
+    //            if (firstDate.getDay() === 0) {
+    //                end = 1;
+    //            } else {
+    //                end = 7 - firstDate.getDay() + 1;
+    //            }
+    //        }
+    //        while (start <= numDays) {
+    //            weeks.push({
+    //                start: start,
+    //                end: end
+    //            });
+    //            start = end + 1;
+    //            end = end + 7;
+    //            end = start === 1 && end === 8 ? 1 : end;
+    //            if (end > numDays) {
+    //                end = numDays;
+    //            }
+    //        }
+    //        return weeks;
+    //    }
 
-        //return invalid date
-    }
-
-    function gw() {
-        wk = document.getElementById("wk");
-        dy = document.getElementById("dy");
-
-        wk.innerHTML = wkdf;
-        dy.innerHTML = dayofyear(dt1) - dayofyear(dt2); // no calcula bien
-
-        console.log("-------------------------");
-        console.log("wk" + wk.innerHTML);
-        console.log("dy" + dy.innerHTML);
-        console.log("-------------------------");
-    }
-    gw();
-    dtn();
 }
-//t1();
 
-function getWeeksStartAndEndInMonth(month, year, start) {
-    let weeks = [],
-        firstDate = new Date(year, month, 1),
-        lastDate = new Date(year, month + 1, 0),
-        numDays = lastDate.getDate();
 
-    start = 1;
-    let end = 7 - firstDate.getDay();
-    if (start === 'monday') {
-        if (firstDate.getDay() === 0) {
-            end = 1;
-        } else {
-            end = 7 - firstDate.getDay() + 1;
-        }
-    }
-    while (start <= numDays) {
-        weeks.push({
-            start: start,
-            end: end
-        });
-        start = end + 1;
-        end = end + 7;
-        end = start === 1 && end === 8 ? 1 : end;
-        if (end > numDays) {
-            end = numDays;
-        }
-    }
-    return weeks;
-}
+//document.getElementById('date').addEventListener("onselect", this);
+// DAYS are not updating on DIV
